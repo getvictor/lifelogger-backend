@@ -2,9 +2,11 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var util = require('util');
 var config = require('./config.json');
+var logger = require('morgan');
 
 var app = express();
 
+app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -36,7 +38,7 @@ app.use(function(req, res, next) {
 });
 
 // Routes
-var moves = require('./routes/moves');
+var moves = require('./routeMoves');
 app.use('/moves', moves);
 
 app.listen(3000);

@@ -13,6 +13,8 @@
     "express": "~4.10.5",
     "xhr2": "~0.1.0",
     "body-parser": "~1.10.0",
-    "request": "~2.51.0"
+    "request": "~2.51.0",
+    "q": "git://github.com/microjs/q",
+    "morgan": "~1.5.0"
   }
 }
